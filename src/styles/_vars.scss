@@ -1,0 +1,83 @@
+@import '~@angular/material/theming';
+
+$light-primary:    mat-palette($mat-indigo, 700);
+$light-accent:     mat-palette($mat-teal, 900, 200, 900);
+$light-warn:       mat-palette($mat-red, 600);
+$light-background: mat-palette($mat-grey, 100);
+
+// Include the default theme styles.
+
+
+// Define an alternate dark theme.
+$dark-primary: mat-palette($mat-indigo, 300);
+$dark-accent:  mat-palette($mat-teal, 600, 200, 900);
+$dark-warn:    mat-palette($mat-red, 500);
+
+
+// // Grey
+$grey: mat-color($mat-grey, 500);
+$grey_light: mat-color($mat-grey, 200);
+$grey_dark: mat-color($mat-grey, 900);
+
+// // Dark
+$darkness: #000;
+
+// Accent
+$l-accent: mat-color($light-accent);
+$d-accent: mat-color($light-accent);
+
+// Primary
+$l-primary: mat-color($light-primary);
+$d-primary: mat-color($dark-primary);
+
+// Warn
+$l-warn: mat-color($light-warn);
+$d-warn: mat-color($dark-warn);
+
+// Mixins
+// Colors
+@mixin setColor($property, $color: accent) {
+    @if $color == accent {
+        #{$property}: $l-accent;
+        
+        :host-context(.dark-theme) & {
+            #{$property}: $d-accent;
+        }
+    }
+    @if $color == primary {
+        #{$property}: $l-primary;
+        
+        :host-context(.dark-theme) & {
+            #{$property}: $d-primary;
+        }
+    }
+    @if $color == warn {
+        #{$property}: $l-warn;
+        
+        :host-context(.dark-theme) & {
+            #{$property}: $d-warn;
+        }
+    }
+    @if $color == fill {
+        #{$property}: #fff;
+        
+        :host-context(.dark-theme) & {
+            #{$property}: #424242;
+        }
+    }
+}
+// flex
+@mixin flex($direction, $content: flex-start, $item: stretch, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $item;
+    flex-wrap: $wrap;
+}
+
+@mixin content {
+    padding: 1.4rem;
+    margin: 1.2rem;
+    box-sizing: border-box;
+    background-color: #fff;
+}
