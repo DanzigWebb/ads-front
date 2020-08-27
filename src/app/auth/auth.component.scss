@@ -1,0 +1,6 @@
+@import "vars";
+
+.auth {
+    height: 100%;
+    @include flex(row, center, center)
+}
