@@ -1,0 +1,17 @@
+@import "vars";
+
+.auth {
+    &__wrapper {
+        padding: 1rem;
+        border-radius: 5px;
+        min-width: 300px;
+        
+        @include setColor(background-color, fill);
+        box-sizing: 0 1px 6px -1px rgba(0, 0, 0, 0.3);
+    }
+    
+    &__form {
+        width: 100%;
+        display: grid;
+    }
+}
