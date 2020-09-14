@@ -1,7 +1,15 @@
 <mat-toolbar class="header">
-    <div class="header__wrapper">
+    <div class="header__wrapper" *ngIf="auth.user | async as user">
         <span>Whitepage Generator</span>
 
-        <button mat-icon-button matTooltip="Выйти"><mat-icon>exit_to_app</mat-icon></button>
+        <div class="header__user">
+            <span>{{user.username}}</span>
+
+            <button mat-icon-button
+                    matTooltip="Выйти"
+                    (click)="auth.logout()">
+                <mat-icon>exit_to_app</mat-icon>
+            </button>
+        </div>
     </div>
 </mat-toolbar>

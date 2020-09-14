@@ -30,6 +30,12 @@ export class AuthService {
     localStorage.setItem('token', token);
   }
 
+  logout(): void {
+    this.user.next(null);
+    localStorage.clear();
+    this.router.navigate(['auth']);
+  }
+
   getTokenFromStorage(): string {
     return localStorage.getItem('token');
   }

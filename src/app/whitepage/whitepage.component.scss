@@ -6,4 +6,8 @@
         width: 100%;
         @include flex(row, space-between, center)
     }
+    
+    &__user {
+        @include flex(row, center, center)
+    }
 }
