@@ -11,3 +11,39 @@
         @include flex(row, center, center)
     }
 }
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.whitepage {
+    margin: 2rem 0;
+    
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+    }
+    
+    &__title {
+        text-align: center;
+        font-weight: normal;
+        font-size: 30px;
+        margin-bottom: 3rem;
+    }
+    
+    &__column {
+        @include flex(column)
+    }
+    
+    &__images {
+        
+        &-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1rem;
+        }
+    }
+}
