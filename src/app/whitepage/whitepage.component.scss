@@ -1,0 +1,9 @@
+@import "vars";
+
+.header {
+    
+    &__wrapper {
+        width: 100%;
+        @include flex(row, space-between, center)
+    }
+}
