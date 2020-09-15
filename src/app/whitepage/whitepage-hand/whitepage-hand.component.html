@@ -1,0 +1,28 @@
+<div class="whitepage__item">
+    <h3 class="whitepage__subtitle">{{title}}</h3>
+    <form class="whitepage__column" autocomplete="off" [formGroup]="form">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+            <mat-error>Required field</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input matInput formControlName="description">
+            <mat-error>Required field</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Price</mat-label>
+            <input matInput type="number" formControlName="price">
+            <mat-error>Required field</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>image</mat-label>
+            <input matInput formControlName="image">
+            <mat-error>Required field</mat-error>
+        </mat-form-field>
+    </form>
+</div>
