@@ -45,10 +45,10 @@ export class WhitepageHandComponent implements OnInit, ControlValueAccessor {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      name:        [null, Validators.required],
-      description: [null, Validators.required],
-      price:       [null, Validators.required],
-      image:       [null, Validators.required]
+      name:        ['qw', Validators.required],
+      description: ['qw', Validators.required],
+      price:       [12, Validators.required],
+      image:       ['qw', Validators.required]
     });
 
     this.form.valueChanges.subscribe(value => {
