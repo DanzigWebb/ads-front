@@ -12,7 +12,7 @@ export class WhitepageService {
   ) {
   }
 
-  generate(data: IWPData): void {
+  generate(data: IWPData[]): void {
     this.http.post('http://localhost:3000/whitepage', data);
   }
 }
